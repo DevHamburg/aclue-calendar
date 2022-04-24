@@ -1,0 +1,112 @@
+.container {
+    padding: 26px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title-container {
+    display: flex;
+    flex-direction: row;
+    margin: 16px 0;
+}
+
+.title {
+    margin: 0 16px;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #1ba098;
+    width: 280px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 200;
+    letter-spacing: 0.2em;
+}
+
+.arrow-button {
+    background-color: transparent;
+    border: none;
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+    span {
+        color: #deb992;
+        font-size: 2em;
+    }
+}
+
+.days-container {
+    margin-top: 24px;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 4px;
+    justify-content: center;
+    align-items: center;
+    :hover {
+        background-color: rgb(9, 39, 37);
+    }
+
+    .day-box {
+        width: 88px;
+        height: 88px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        border: 1px solid #deb992;
+        border-radius: 4px;
+        cursor: pointer;
+        color: #deb992;
+    }
+
+    .day-header {
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+        span {
+            font-size: 0.8em;
+            padding-left: 4px;
+        }
+    }
+
+    .day-body {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        span {
+            font-size: 2em;
+            color: white;
+        }
+    }
+
+    .day-footer {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        border-top: 1px solid rgba(255, 255, 255, 0.7);
+        small {
+            font-size: 0.4em;
+            padding: 2px;
+        }
+    }
+
+    .current-day {
+        border: 1px solid #1ba098;
+        border-radius: 4px;
+        background-color: rgb(9, 39, 37);
+    }
+}
+
+.subtitle {
+    color: white;
+    font-weight: 300;
+    letter-spacing: 0.4em;
+    margin: 24px 0 0 0;
+}
+
+/* $primary: #deb992;
+$secondary: #1ba098;
+$background: #051622;
+$success: #4eaf5b;
+$danger: #d81536; */
+
+// media scree 768px

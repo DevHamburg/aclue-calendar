@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="title-container">
+    <button class="arrow-button" (click)="decrementYear()">
+      <span>⮜</span>
+    </button>
+    <h2 class="title">{{ monthAndYear | date: "YYYY" }}</h2>
+    <button class="arrow-button" (click)="incrementYear()">
+      <span>⮞</span>
+    </button>
+  </div>
+
+  <div class="title-container">
+    <button class="arrow-button" (click)="decrementMonth()">
+      <span>⮜</span>
+    </button>
+    <h2 class="title">{{ monthAndYear | date: "MMMM" }}</h2>
+    <button class="arrow-button" (click)="incrementMonth()">
+      <span>⮞</span>
+    </button>
+  </div>
+
+  <h2 class="subtitle">{{ currentDate | date: "dd.MM.YYYY" }}</h2>
+
+  <div class="days-container">
+    <div *ngFor="let day of days">
+      <div class="day-box" [ngClass]="isCurrentDay(day) ? 'current-day' : ''">
+        <div class="day-header">
+          <span>{{ day | date: "EE" }}</span>
+        </div>
+        <div class="day-body">
+          <span>{{ day | date: "dd" }} </span>
+        </div>
+        <div class="day-footer">
+          <small>{{ day | date: "EE" }} {{ day | date: "dd" }}</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
